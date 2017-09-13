@@ -1,43 +1,24 @@
+/* GLOBAL */
 body {
 	font-family: "Roboto Mono", monospace;
 	color: #36ed39;
 	background-color: #1c1c1c;
 	padding: 30px 30px 30px 30px;
 }
+a { color: #b4ba1b; }
+p { margin: 0px 0px 0px 0px; }
+h2, h3, h4, h5, p, a { font-size: 16px; }
+header, section { padding-bottom: 15px; }
 
-a {
-	color: #b4ba1b;
-	/*text-decoration: none;*/
-}
+/* LAYOUT */
+.single-project { padding-bottom: 10px; }
 
-p {
-	margin: 0px 0px 0px 0px;
-}
+/* TABS */
+.single-tab { padding-left: 40px; }
+.double-tab { padding-left: 80px; }
 
-h2, h3, h4, h5, p, a {
-	font-size: 16px;
-}
-
-header, section {
-	padding-bottom: 15px;
-}
-
-.single-tab {
-	padding-left: 40px;
-}
-.double-tab {
-	padding-left: 80px;
-}
-
-
-
-/* terminal colours */
+/* TERMINAL COLOURS */
 .console-user { color: #2c82b7; }
 .console-os { color: #209b23; }
 .console-pwd { color: #d1bc1d; }
-
-.single-project {
-	padding-bottom: 10px;
-}
-
 .action-output { color: #ed5c77; }

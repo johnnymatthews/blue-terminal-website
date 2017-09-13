@@ -18,8 +18,10 @@
   	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Mohnjatthews by John Matthews</title>
   	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  	<link rel="stylesheet" href="css/style.css">
   	<link rel="icon" href="favicon.png">
+  	<style> /* Downloading one file is better than two. */
+  		body{font-family:"Roboto Mono",monospace;color:#36ed39;background-color:#1c1c1c;padding:30px}a{color:#b4ba1b}p{margin:0}a,h2,h3,h4,h5,p{font-size:16px}header,section{padding-bottom:15px}.single-project{padding-bottom:10px}.single-tab{padding-left:40px}.double-tab{padding-left:80px}.console-user{color:#2c82b7}.console-os{color:#209b23}.console-pwd{color:#d1bc1d}.action-output{color:#ed5c77}
+  	</style>
 </head>
 <body>
  	<header>
@@ -27,7 +29,7 @@
  		<br>
  		<p><span class="console-user">user</span>@<span class="console-os"><?= strtolower(get_browser_name($_SERVER['HTTP_USER_AGENT'])); ?>:</span><span class="console-pwd">~/$</span> mohnjatthews <span class="section-colour">--about</span></p>
  		<br>
- 		<p class="single-tab">Hi I'm John Matthews and this is my online portfolio. Contact information is at the bottom, recent projects are in the middle, and the introductary paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p>
+ 		<p class="single-tab">Hi, I'm John Matthews, and I write code. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p>
   	</header>
 	<section name="projects" class="projects">
 		<p><span class="console-user">user</span>@<span class="console-os"><?= strtolower(get_browser_name($_SERVER['HTTP_USER_AGENT'])); ?>:</span><span class="console-pwd">~/$</span> mohnjatthews <span class="section-colour">--projects</span></p>
