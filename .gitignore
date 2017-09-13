@@ -4,4 +4,5 @@
 # But not these files...
 !.git
 !.gitignore
-!.index.php
+!index.php
+!favicon.png
