@@ -1,0 +1,7 @@
+# Ignore everything
+*
+
+# But not these files...
+!.git
+!.gitignore
+!.index.php
