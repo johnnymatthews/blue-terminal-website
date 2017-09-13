@@ -20,8 +20,12 @@ header, section { padding-bottom: 15px; }
 .blinker { animation: blinker 1s linear infinite; }
 @keyframes blinker {  50% { opacity: 0; } }
 
+/* COLOUR TITLES */
+.title-basic { color: black; background-color: white; }
+.title-man { color: yellow; background-color: #6195e8; }
+.title-mohn { color: #2c82b7; background-color: #d1bc1d; }
+
 /* TERMINAL COLOURS */
 .console-user { color: #2c82b7; }
 .console-os { color: #209b23; }
 .console-pwd { color: #d1bc1d; }
-.action-output { color: #ed5c77; }
