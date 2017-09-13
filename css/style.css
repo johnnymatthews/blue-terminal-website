@@ -22,3 +22,7 @@ header, section { padding-bottom: 15px; }
 .console-os { color: #209b23; }
 .console-pwd { color: #d1bc1d; }
 .action-output { color: #ed5c77; }
+
+/* FLASHING TEXT */
+.blinker { animation: blinker 1s linear infinite; }
+@keyframes blinker {  50% { opacity: 0; } }

@@ -18,19 +18,17 @@
   	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Mohnjatthews by John Matthews</title>
   	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+  	<link href="css/style.css" rel="stylesheet">
   	<link rel="icon" href="favicon.png">
-  	<style> /* Downloading one file is better than two. */
-  		body{font-family:"Roboto Mono",monospace;color:#36ed39;background-color:#1c1c1c;padding:30px}a{color:#b4ba1b}p{margin:0}a,h2,h3,h4,h5,p{font-size:16px}header,section{padding-bottom:15px}.single-project{padding-bottom:10px}.single-tab{padding-left:40px}.double-tab{padding-left:80px}.console-user{color:#2c82b7}.console-os{color:#209b23}.console-pwd{color:#d1bc1d}.action-output{color:#ed5c77}
-  	</style>
 </head>
 <body>
- 	<header>
- 		<p>Last login: <?= date('D d M Y h:i:s'); ?></p>
- 		<br>
+	<header>
+		<p>Last login: <?= date('D d M Y h:i:s'); ?></p>
+	</header>
+ 	<section>
  		<p><span class="console-user">user</span>@<span class="console-os"><?= strtolower(get_browser_name($_SERVER['HTTP_USER_AGENT'])); ?>:</span><span class="console-pwd">~/$</span> mohnjatthews <span class="section-colour">--about</span></p>
- 		<br>
  		<p class="single-tab">Hi, I'm John Matthews, and I write code. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p>
-  	</header>
+  	</section>
 	<section name="projects" class="projects">
 		<p><span class="console-user">user</span>@<span class="console-os"><?= strtolower(get_browser_name($_SERVER['HTTP_USER_AGENT'])); ?>:</span><span class="console-pwd">~/$</span> mohnjatthews <span class="section-colour">--projects</span></p>
 		<div class="single-tab single-project">
@@ -60,7 +58,10 @@
  	</section>
  	<section>
  		<p><span class="console-user">user</span>@<span class="console-os"><?= strtolower(get_browser_name($_SERVER['HTTP_USER_AGENT'])); ?>:</span><span class="console-pwd">~/$</span> mohnjatthews <span class="section-colour">--contact</span></p>
- 		<p id="email-address-reveal" class="single-tab"><a onclick="toggleEmail()">I don't like spam, so click/press this line to show my email address:</p>
+ 		<p id="email-address-reveal" class="single-tab"><a onclick="toggleEmail()">I don't like spam, so click/press this line to show my email address:</a></p>
+ 	</section>
+ 	<section>
+		<p><span class="console-user">user</span>@<span class="console-os"><?= strtolower(get_browser_name($_SERVER['HTTP_USER_AGENT'])); ?>:</span><span class="console-pwd">~/$</span> <span class="blinker">_</span></p>
  	</section>
 	<script>
         function toggleEmail() {
