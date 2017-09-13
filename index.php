@@ -40,6 +40,10 @@
 			<p>- Website and hosting for a metal band in the UK.</p>
 		</div>
 		<div class="single-tab single-project">
+			<p>- <a href="#">Terrible CMS</a></p>
+			<p>- Custom CMS development for personal and freelance projects.</p>
+		</div>
+		<div class="single-tab single-project">
 			<p>- <a href="#">Friendsum</a></p>
 			<p>- Custom lorem ipsum generator created during a hackday.</p>
 		</div>
@@ -58,7 +62,9 @@
  	</section>
  	<section>
  		<p><span class="console-user">user</span>@<span class="console-os"><?= strtolower(get_browser_name($_SERVER['HTTP_USER_AGENT'])); ?>:</span><span class="console-pwd">~/$</span> mohnjatthews <span class="section-colour">--contact</span></p>
- 		<p id="email-address-reveal" class="single-tab"><a onclick="toggleEmail()">I don't like spam, so click/press this line to show my email address:</a></p>
+ 		<p id="email-address-reveal" class="single-tab"><a onclick="toggleEmail()">I don't like spam.</a></p>
+ 		<p class="single-tab"><a href="//www.github.com/mohnjatthews">GitHub</a></p>
+ 		<p class="single-tab"><a href="//www.linkedin.com/in/mohnjatthews">LinkedIn</a></p>
  	</section>
  	<section>
 		<p><span class="console-user">user</span>@<span class="console-os"><?= strtolower(get_browser_name($_SERVER['HTTP_USER_AGENT'])); ?>:</span><span class="console-pwd">~/$</span> <span class="blinker">_</span></p>
