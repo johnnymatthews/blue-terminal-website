@@ -1,10 +1,5 @@
 /* GLOBAL */
-body {
-	font-family: "Roboto Mono", monospace;
-	color: #36ed39;
-	background-color: #1c1c1c;
-	padding: 30px 30px 30px 30px;
-}
+body { color: #36ed39; background-color: #1c1c1c; padding: 30px 30px 30px 30px; font-family: "Roboto Mono", monospace; }
 a { color: #b4ba1b; }
 p { margin: 0px 0px 0px 0px; }
 h2, h3, h4, h5, p, a { font-size: 16px; }
@@ -17,12 +12,12 @@ header, section { padding-bottom: 15px; }
 .single-tab { padding-left: 40px; }
 .double-tab { padding-left: 80px; }
 
+/* FLASHING TEXT */
+.blinker { animation: blinker 1s linear infinite; }
+@keyframes blinker {  50% { opacity: 0; } }
+
 /* TERMINAL COLOURS */
 .console-user { color: #2c82b7; }
 .console-os { color: #209b23; }
 .console-pwd { color: #d1bc1d; }
 .action-output { color: #ed5c77; }
-
-/* FLASHING TEXT */
-.blinker { animation: blinker 1s linear infinite; }
-@keyframes blinker {  50% { opacity: 0; } }
