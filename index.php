@@ -18,15 +18,17 @@
   	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Mohnjatthews by John Matthews</title>
   	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  	<link rel="icon" href="favicon.png">
+  	<link href="/style.css" rel="stylesheet">
+  	<link rel="icon" href="/favicon.png">
+  	<style id="color-scheme-css"></style>
 </head>
-<style>
-	body{color:#36ed39;background-color:#1c1c1c;padding:30px;font-family:"Roboto Mono",monospace}a{color:#b4ba1b}p{margin:0}a,h2,h3,h4,h5,p{font-size:16px}header,section{padding-bottom:15px}.single-project{padding-bottom:10px}.single-tab{padding-left:40px}.double-tab{padding-left:80px}@media screen and (max-width:700px){.single-tab{padding-left:20px}.double-tab{padding-left:40px}}.blinker{animation:blinker 1s linear infinite}@keyframes blinker{50%{opacity:0}}.title{cursor:pointer}.title-basic{color:#000;background-color:#fff}.title-man{background-color:#ff0;color:#6195e8}.title-mohn{color:#36ed39;background-color:#1c1c1c;}
-</style>
-<style id="color-scheme-css">
-	.console-user{color:#2c82b7}.console-os{color:#209b23}.console-pwd{color:#d1bc1d}
-</style>
 <body>
+	<nav>
+		<p>=================</p>
+		<p>|| <a href="/">home</a> | <a href="/blog">blog</a> ||</p>
+		<p>=================</p>
+		<br>
+	</nav>
  	<section>
  		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --about</p>
  		<br>
@@ -72,32 +74,7 @@
  	<section>
 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> style <span class="title title-basic" onclick="changeColorScheme('basic')">basic</span> <span class="title title-man" onclick="changeColorScheme('man')">man</span> <span class="title title-mohn" onclick="changeColorScheme('mohn')">mohn</span></p>
  	</section>
-	<script>
-        function toggleEmail() {
-            var email_address = "john" + "@" + "mohnj" + "atthe" + "ws.c" + "om";
-            if(document.getElementById("email-address-reveal").innerHTML != '<a href="mailto:' + email_address + '">' + email_address + '</a>') {
-            	document.getElementById("email-address-reveal").innerHTML = '<a href="mailto:' + email_address + '">' + email_address + '</a>';
-            } else {
-                document.getElementById("email-address-reveal").innerHTML = '&nbsp;'
-            }
-        }
-        function changeColorScheme(color_scheme) {
-        	var code_snippet
-        	switch(color_scheme) {
-        	    case 'basic':
-        	    	console.log('here!');
-        	        code_snippet = '.console-user,body{color:#000}body{background-color:#fff}.console-os{color:grey}.console-pwd{color:#000}';
-        	        break;
-        	    case 'man':
-        	        code_snippet = 'body{color:#6195e8;background-color:#ff0}.console-user{color:red}.console-os{color:#00f}.console-pwd{color:#fff}';
-        	        break;
-        	    default:
-        	        code_snippet = 'body{color:#36ed39;background-color:#1c1c1c}.console-user{color:#2c82b7}.console-os{color:#209b23}.console-pwd{color:#d1bc1d}';
-        	}
-        	console.log('there!');
-        	document.getElementById('color-scheme-css').innerHTML = code_snippet;
-        }
-    </script>
+	<script src="email-address-reveal.js"></script>
 </body>
 </html>
 <?= round(filesize("index.php") / 1024, 2) . 'KB loaded in ' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
