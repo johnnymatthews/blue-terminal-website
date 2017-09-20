@@ -34,11 +34,7 @@
  		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --about</p>
  		<br>
  		<header>
-<<<<<<< HEAD
- 			<p class="single-tab">Hi, I'm John Matthews, and I write code. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p>
-=======
  			<p class="single-tab">Hi, I'm John Matthews, and I write code. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p> 
->>>>>>> faabe72034767327de22b2d16af5d6b00228bccd
  		</header>
   	</section>
 	<section name="projects" class="projects">
@@ -82,9 +78,4 @@
 	<script src="/assets/scripts/email-address-reveal.js"></script>
 	<?= round(filesize(__FILE__) / 1024, 2) . 'KB loaded in ' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
-<?= round(filesize("index.php") / 1024, 2) . 'KB loaded in ' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
->>>>>>> faabe72034767327de22b2d16af5d6b00228bccd
