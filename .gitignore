@@ -1,8 +1,3 @@
-# Ignore everything
-*
-
-# But not these files...
-!.git
-!.gitignore
-!index.php
-!favicon.png
+.DS_Store
+composer.json
+vendor*
