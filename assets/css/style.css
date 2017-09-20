@@ -1,0 +1,94 @@
+body {
+    color: #36ed39;
+    background-color: #1c1c1c;
+    padding: 30px;
+    font-family: "Roboto Mono", monospace
+}
+a {
+    color: #b4ba1b
+}
+p {
+    margin: 0;
+}
+article > p {
+	padding-bottom: 15px;
+}
+h1, h2, h3, p, a, code, pre {
+    font-size: 16px
+}
+h1, h2, h3 {
+	letter-spacing: 3px;
+}
+header, section, article {
+    padding-bottom: 10px
+}
+li {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+img {
+	padding: 5px 5px 5px 5px;
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	height: auto;
+}
+pre, code {
+	color: white;
+	background-color: #606060;
+}
+pre {
+	height: auto;
+    max-height: 200px;
+    overflow: auto;
+    padding: 10px 10px 10px 10px;
+}
+code {
+	background-color: #606060;
+}
+.single-project {
+    padding-bottom: 10px
+}
+.single-tab {
+    padding-left: 40px
+}
+.double-tab {
+    padding-left: 80px
+}
+@media screen and (max-width: 700px) {
+    .single-tab {
+        padding-left: 20px
+    }
+    .double-tab {
+        padding-left: 40px
+    }
+}
+.blinker {
+    animation: blinker 1s linear infinite
+}
+@keyframes blinker {
+    50% {
+        opacity: 0
+    }
+}
+.title {
+    cursor: pointer
+}
+.title-basic {
+    color: #000;
+    background-color: #fff
+}
+.title-man {
+    background-color: #ff0;
+    color: #6195e8
+}
+.title-mohn {
+    color: #36ed39;
+    background-color: #1c1c1c;
+}
+h1 { color: #8AFFC1; }
+h2 { color: #F7717D; }
+h3 { color: #89A6FB; }
+.console-user{color:#2c82b7}.console-os{color:#209b23}.console-pwd{color:#d1bc1d}
