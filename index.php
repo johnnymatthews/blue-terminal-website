@@ -18,49 +18,50 @@
   	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Mohnjatthews by John Matthews</title>
   	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  	<link href="/style.css" rel="stylesheet">
+  	<link href="/assets/css/style.css" rel="stylesheet">
   	<link rel="icon" href="/favicon.png">
   	<style id="color-scheme-css"></style>
 </head>
 <body>
 	<nav>
-		<p>=================</p>
-		<p>|| <a href="/">home</a> | <a href="/blog">blog</a> ||</p>
-		<p>=================</p>
+		<p>==========</p>
+		<p>|| <a href="/">home</a> ||</p>
+		<!-- <p>|| <a href="/">home</a> | <a href="/blog">blog</a> ||</p> -->
+		<p>==========</p>
 		<br>
 	</nav>
  	<section>
  		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --about</p>
  		<br>
  		<header>
- 			<p class="single-tab">Hi, I'm John Matthews, and I write code. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint. I sometimes <a href="/blog">blog</a> about things too.</p>
+ 			<p class="single-tab">Hi, I'm John Matthews, and I write code. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p>
  		</header>
   	</section>
 	<section name="projects" class="projects">
 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --projects</p>
 		<br>
 		<div class="single-tab single-project">
-			<p><a href="#">Strip Health Cafe</a></p>
+			<p><a href="//www.striphealthcafe.com/">Strip Health Cafe</a></p>
 			<p>Website, hosting, and graphic design for a healthy food-cafe based in Manchester UK.</p>
 		</div>
 		<div class="single-tab single-project">
-			<p><a href="#">The Ninja Report</a></p>
+			<p><a href="//www.theninjareport.co.uk">The Ninja Report</a></p>
 			<p>Website and hosting for a metal band in the UK.</p>
 		</div>
 		<div class="single-tab single-project">
-			<p><a href="#">Friendsum</a></p>
+			<p><a href="//github.com/mohnjatthews/friendsum">Friendsum</a></p>
 			<p>Custom lorem ipsum generator created during a hackday.</p>
 		</div>
 		<div class="single-tab single-project">
-			<p><a href="#">DM Bespoke Health</a></p>
+			<p><a href="//www.dmbespokehealth.co.uk/index.php">DM Bespoke Health</a></p>
 			<p>Website for a personal fitness instructor contact website.</p>
 		</div>
 		<div class="single-tab single-project">
-			<p><a href="#">LOTR Timer</a></p>
+			<p><a href="//github.com/mohnjatthews/lotr-timer-depricated">LOTR Timer</a></p>
 			<p>The Lord of the Rings related hackday project.</p>
 		</div>
 		<div class="single-tab single-project">
-			<p><a href="#">Tithe Barn</a></p>
+			<p><a href="//www.tithebarn.net">Tithe Barn</a></p>
 			<p>Website, hosting, and company branding for a bed and breakfast in Cumbria, UK.</p>
 		</div>
  	</section>
@@ -71,10 +72,10 @@
  		<p class="single-tab"><a href="//www.github.com/mohnjatthews">GitHub</a></p>
  		<p class="single-tab"><a href="//www.linkedin.com/in/mohnjatthews">LinkedIn</a></p>
  	</section>
- 	<section>
+ 	<footer>
 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> style <span class="title title-basic" onclick="changeColorScheme('basic')">basic</span> <span class="title title-man" onclick="changeColorScheme('man')">man</span> <span class="title title-mohn" onclick="changeColorScheme('mohn')">mohn</span></p>
- 	</section>
-	<script src="email-address-reveal.js"></script>
+ 	</footer>
+	<script src="/assets/scripts/email-address-reveal.js"></script>
+	<?= round(filesize(__FILE__) / 1024, 2) . 'KB loaded in ' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
 </body>
 </html>
-<?= round(filesize("index.php") / 1024, 2) . 'KB loaded in ' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
