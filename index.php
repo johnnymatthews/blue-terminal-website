@@ -24,10 +24,9 @@
 </head>
 <body>
 	<nav>
-		<p>==========</p>
-		<p>|| <a href="/">home</a> ||</p>
-		<!-- <p>|| <a href="/">home</a> | <a href="/blog">blog</a> ||</p> -->
-		<p>==========</p>
+		<p>=================</p>
+		<p>|| <a href="/">home</a> | <a href="/blog">blog</a> ||</p>
+		<p>=================</p>
 		<br>
 	</nav>
  	<section>

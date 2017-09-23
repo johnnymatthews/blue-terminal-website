@@ -1,5 +1,10 @@
 <?php
-	require('../../vendor/autoload.php');
+	// Get packages from Composer.
+	require('../vendor/autoload.php');
+	use Cocur\Slugify\Slugify;
+	$slugify = new Slugify();
+	$Parsedown = new Parsedown();
+
 	// Get browser name.
 	function get_browser_name($user_agent) {
 		if (strpos($user_agent, 'Opera') || strpos($user_agent, 'OPR/')) return 'opera';
@@ -11,13 +16,18 @@
 		return 'browser';
 	}
 	$browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
+
+	// Grab and create post information.
+	$post_name = "Open the File Manager from Inside the Terminal";
+	$slug = $slugify->slugify($post_name);
+	$markdown_post = file_get_contents($slug . ".md");
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Mohnjatthews by John Matthews</title>
+	<title>Mohnjatthews - <?= $post_name; ?></title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 	<link href="/style.css" rel="stylesheet">
 	<link rel="icon" href="/favicon.png">
@@ -31,18 +41,16 @@
 		<br>
 	</nav>
 	<section>
-		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> Example Post</p>
+		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> Blog</p>
 		<article class="single-tab">
 			<?php
-				$Parsedown = new Parsedown();
-				$markdown_file = file_get_contents("example-post.md");
-				echo $Parsedown->text($markdown_file);
+				echo $Parsedown->text($markdown_post);
 			?>
 		</article>
 	</section>
 	<section>
 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> style <span class="title title-basic" onclick="changeColorScheme('basic')">basic</span> <span class="title title-man" onclick="changeColorScheme('man')">man</span> <span class="title title-mohn" onclick="changeColorScheme('mohn')">mohn</span></p>
 	</section>
+	<?= round(filesize(__FILE__) / 1024, 2) . 'KB loaded in >' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
 </body>
 </html>
-<?= round(filesize("index.php") / 1024, 2) . 'KB loaded in ' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>

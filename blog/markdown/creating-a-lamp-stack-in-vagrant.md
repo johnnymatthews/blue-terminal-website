@@ -1,4 +1,5 @@
-# How to Make a LAMP Stack in 17 Steps
+# Creating a LAMP Stack in Vagrant
+Vagrant is an excellent tool for developing and spinning up multiple VMs all at once. There a hundreds of great *pre-built* Vagrant boxes out there in the multiverse, but if you want to give building your own LAMP stack a go then follow these steps. Don't worry, it's pretty much just a copy and paste job for most of it.
 
 ---
 
@@ -26,8 +27,10 @@
 	6. Reload Privilege Table: `y`
 14. `sudo apt-get install -y php libapache2-mod-php php-mcrypt php-mysql`
 15. `sudo apt-get install -y php-cgi php-cli php-curl php-common php-gd php-mysql`
-16. Change the second line in **/etc/apache2/mods-enabled/dir.conf** to this:
-	`DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm`
+16. Change the second line in `/etc/apache2/mods-enabled/dir.conf` to this:
+	
+		DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+
 17. `sudo systemctl restart apache2`
 
 And you're done!
