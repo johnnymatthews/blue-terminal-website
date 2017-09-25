@@ -2,4 +2,4 @@
 .DS_Store
 composer.json
 vendor*
-pizza.php # adminer
+pizza* # adminer
