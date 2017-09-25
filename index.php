@@ -1,14 +1,5 @@
 <?php 
-	// Get browser name.
-	function get_browser_name($user_agent) {
-	    if (strpos($user_agent, 'Opera') || strpos($user_agent, 'OPR/')) return 'opera';
-	    elseif (strpos($user_agent, 'Edge')) return 'edge';
-	    elseif (strpos($user_agent, 'Chrome')) return 'chrome';
-	    elseif (strpos($user_agent, 'Safari')) return 'safari';
-	    elseif (strpos($user_agent, 'Firefox')) return 'firefox';
-	    elseif (strpos($user_agent, 'MSIE') || strpos($user_agent, 'Trident/7')) return 'ie';
-	    return 'browser';
-	}
+	include('/var/www/public/assets/functions/get-browser-name.php');
 	$browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
 ?>
 <!DOCTYPE HTML>
@@ -33,7 +24,7 @@
  		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --about</p>
  		<br>
  		<header>
- 			<p class="single-tab">Hi, I'm John Matthews, and I write code. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p> 
+ 			<p class="single-tab">Hi, I'm John Matthews, and I write code and technical docs. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p> 
  		</header>
   	</section>
 	<section name="projects" class="projects">
