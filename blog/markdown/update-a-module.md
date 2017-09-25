@@ -1,4 +1,4 @@
-# To Update a Module
+# Update A Module in DKAN
 To do this you need to make sure that `sites/default` and `profiles/dkan` (recursively) are both *owned* by **www-data**.
 
 Run the following:

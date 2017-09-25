@@ -2,15 +2,15 @@
 
 Find out the `id` of your mouse by running `xinput list | grep 'id='`. This should give you a list similar to the following:
 
-	⎡ Virtual core pointer                    	id=2	[master pointer  (3)]
-	⎜   ↳ Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
-	⎜   ↳ PixArt Microsoft USB Optical Mouse      	id=10	[slave  pointer  (2)]
-	⎣ Virtual core keyboard                   	id=3	[master keyboard (2)]
-		↳ Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
-		↳ Power Button                            	id=6	[slave  keyboard (3)]
-		↳ Power Button                            	id=7	[slave  keyboard (3)]
-		↳ Logitech USB Keyboard                   	id=8	[slave  keyboard (3)]
-		↳ Logitech USB Keyboard                   	id=9	[slave  keyboard (3)]
+	[ Virtual core pointer                    	id=2	[master pointer  (3)]
+	[   - Virtual core XTEST pointer              	id=4	[slave  pointer  (2)]
+	[   - PixArt Microsoft USB Optical Mouse      	id=10	[slave  pointer  (2)]
+	[ Virtual core keyboard                   	id=3	[master keyboard (2)]
+		- Virtual core XTEST keyboard             	id=5	[slave  keyboard (3)]
+		- Power Button                            	id=6	[slave  keyboard (3)]
+		- Power Button                            	id=7	[slave  keyboard (3)]
+		- Logitech USB Keyboard                   	id=8	[slave  keyboard (3)]
+		- Logitech USB Keyboard                   	id=9	[slave  keyboard (3)]
 
 Now, my mouse has *Microsoft* written on the back, so I can assume that it's the *PixArt Microsoft USB Optical Mouse*, which has an `id` of 10.
 

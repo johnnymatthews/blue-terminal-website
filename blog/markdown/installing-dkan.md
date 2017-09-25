@@ -1,3 +1,7 @@
+# Installing DKAN
+
+---
+
 # Basic Play-By-Play
 First, ssh into server: `ssh user@something.com`.
 

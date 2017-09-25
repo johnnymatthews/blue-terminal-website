@@ -1,4 +1,4 @@
-#Get a copy of Live DKAN Stuff
+# Get A Copy of Live DKAN Data
 
 ## In the Live DKAN instance (S3)
 1. Go into Adminer and export the DKAN database.

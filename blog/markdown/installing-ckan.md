@@ -189,4 +189,4 @@ But you CAN now server CKAN and use it in your web browser:
 
 You should probably run [CKAN's tests](http://docs.ckan.org/en/latest/contributing/test.html) just to make sure that everything is working.
 
-##### Happy Coding.
+### Happy Coding.

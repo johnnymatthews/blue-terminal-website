@@ -1,6 +1,6 @@
 <?php
 	// Get packages from Composer.
-	require('../vendor/autoload.php');
+	require('/var/www/public/vendor/autoload.php');
 	use Cocur\Slugify\Slugify;
 	$slugify = new Slugify();
 	$Parsedown = new Parsedown();
@@ -18,9 +18,9 @@
 	$browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
 
 	// Grab and create post information.
-	$post_name = "Open the File Manager from Inside the Terminal";
+	$post_name = "CKAN Mod WSIG Issue";
 	$slug = $slugify->slugify($post_name);
-	$markdown_post = file_get_contents($slug . ".md");
+	$markdown_post = file_get_contents('../markdown/' . $slug . ".md");
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
@@ -29,7 +29,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Mohnjatthews - <?= $post_name; ?></title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link href="/style.css" rel="stylesheet">
+	<link href="/assets/css/style.css" rel="stylesheet">
 	<link rel="icon" href="/favicon.png">
 	<style id="color-scheme-css"></style>
 </head>
@@ -41,7 +41,7 @@
 		<br>
 	</nav>
 	<section>
-		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> Blog</p>
+		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --blog</p>
 		<article class="single-tab">
 			<?php
 				echo $Parsedown->text($markdown_post);
@@ -51,6 +51,7 @@
 	<section>
 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> style <span class="title title-basic" onclick="changeColorScheme('basic')">basic</span> <span class="title title-man" onclick="changeColorScheme('man')">man</span> <span class="title title-mohn" onclick="changeColorScheme('mohn')">mohn</span></p>
 	</section>
-	<?= round(filesize(__FILE__) / 1024, 2) . 'KB loaded in >' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
+	<script src="/assets/scripts/email-address-reveal.js"></script>
+	<?= round(filesize(__FILE__) / 1024, 2) . 'KB loaded in ' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
 </body>
 </html>
