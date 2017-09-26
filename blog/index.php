@@ -4,10 +4,6 @@ require('/var/www/public/assets/functions/get-env-vars.php');
 include('/var/www/public/assets/functions/get-browser-name.php');
 require('/var/www/public/vendor/autoload.php');
 
-//Grabbing Slugify to use later.
-use Cocur\Slugify\Slugify;
-$slugify = new Slugify();
-
 // Grab user's browser type.
 $browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
 
@@ -72,7 +68,7 @@ function randomWrittenWord($foo) {
 		<?php foreach($result as $post) : ?>
 		<article class="single-tab single-project">
 			<p>
-				<a href="posts/<?= $slugify->slugify($post['title']) ?>.php"><?= $post['title']; ?></a><br>
+				<a href="posts/<?= $post['slug'] ?>.php"><?= $post['title']; ?></a><br>
 				<?= randomWrittenWord(rand(1, 6)); ?> on <?= date('jS F Y', strtotime($post['created'])); ?>
 			</p>
 		</article>
