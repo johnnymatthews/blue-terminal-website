@@ -1,30 +1,14 @@
 <?php 
 	include('/var/www/public/assets/functions/get-browser-name.php');
 	$browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
+	require('/var/www/public/assets/templates/head.php');
+	require('/var/www/public/assets/templates/navbar.php');
 ?>
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-  	<meta charset="UTF-8">
-  	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Mohnjatthews by John Matthews</title>
-  	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-  	<link href="/assets/css/style.css" rel="stylesheet">
-  	<link rel="icon" href="/favicon.png">
-  	<style id="color-scheme-css"></style>
-</head>
-<body>
-	<nav>
-		<p>=================</p>
-		<p>|| <a href="/">home</a> | <a href="/blog">blog</a> ||</p>
-		<p>=================</p>
-		<br>
-	</nav>
  	<section>
  		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --about</p>
  		<br>
  		<header>
- 			<p class="single-tab">Hi, I'm John Matthews, and I write code and technical docs. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p> 
+ 			<p class="single-tab">Hi there, I'm John Matthews. I write code and technical docs. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p> 
  		</header>
   	</section>
 	<section name="projects" class="projects">
@@ -62,10 +46,5 @@
  		<p class="single-tab"><a href="//www.github.com/mohnjatthews">GitHub</a></p>
  		<p class="single-tab"><a href="//www.linkedin.com/in/mohnjatthews">LinkedIn</a></p>
  	</section>
- 	<footer>
-		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> style <span class="title title-basic" onclick="changeColorScheme('basic')">basic</span> <span class="title title-man" onclick="changeColorScheme('man')">man</span> <span class="title title-mohn" onclick="changeColorScheme('mohn')">mohn</span></p>
- 	</footer>
-	<script src="/assets/scripts/email-address-reveal.js"></script>
-	<?= round(filesize(__FILE__) / 1024, 2) . 'KB loaded in ' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
-</body>
-</html>
+ 	<script src="/assets/scripts/email-address-reveal.js"></script>
+ 	<?php require('/var/www/public/assets/templates/footer.php'); ?>

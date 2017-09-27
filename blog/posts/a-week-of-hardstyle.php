@@ -25,17 +25,7 @@
 	// Get file contents of the .md file that has the same name as this php file.
 	$markdown_post = file_get_contents('/var/www/public/blog/markdown/' . $post_slug . ".md");
 ?>
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Mohnjatthews - <?= $post['title']; ?></title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link href="/assets/css/style.css" rel="stylesheet">
-	<link rel="icon" href="/favicon.png">
-	<style id="color-scheme-css"></style>
-</head>
+<?php require('/var/www/public/assets/templates/head.php'); ?>
 <body>
 	<nav>
 		<p>=================</p>

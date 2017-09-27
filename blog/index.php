@@ -13,7 +13,7 @@ try {
 
     $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created DESC"); 
     $stmt->execute();
-    $result = $stmt->fetchAll();
+    $result_index = $stmt->fetchAll();
 } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
@@ -44,17 +44,7 @@ function randomWrittenWord($foo) {
     return $word;
 }
 ?>
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link href="/assets/css/style.css" rel="stylesheet">
-	<link rel="icon" href="/favicon.png">
-	<title>Mohnjatthews - Blog</title>
-	<style id="color-scheme-css"></style>
-</head>
+<?php require('/var/www/public/assets/templates/head.php'); ?>
 <body>
 	<nav>
 		<p>=================</p>
@@ -65,7 +55,7 @@ function randomWrittenWord($foo) {
 	<section>
 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --blog</p>
 		<br>
-		<?php foreach($result as $post) : ?>
+		<?php foreach($result_index as $post) : ?>
 		<article class="single-tab single-project">
 			<p>
 				<a href="posts/<?= $post['slug'] ?>.php"><?= $post['title']; ?></a><br>
