@@ -18,8 +18,8 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-function randomWrittenWord($foo) {
-	switch ($foo) {
+function randomWrittenWord($word) {
+	switch ($word) {
 	    case 1:
 	        $word = "Hastily written";
 	        break;
@@ -43,15 +43,9 @@ function randomWrittenWord($foo) {
     }
     return $word;
 }
+require('/var/www/public/assets/templates/head.php');
+require('/var/www/public/assets/templates/navbar.php');
 ?>
-<?php require('/var/www/public/assets/templates/head.php'); ?>
-<body>
-	<nav>
-		<p>=================</p>
-		<p>|| <a href="/">home</a> | <a href="/blog">blog</a> ||</p>
-		<p>=================</p>
-		<br>
-	</nav>
 	<section>
 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --blog</p>
 		<br>
@@ -64,10 +58,5 @@ function randomWrittenWord($foo) {
 		</article>
 		<?php endforeach; ?>
 	</section>
-	<section>
-		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> style <span class="title title-basic" onclick="changeColorScheme('basic')">basic</span> <span class="title title-man" onclick="changeColorScheme('man')">man</span> <span class="title title-mohn" onclick="changeColorScheme('mohn')">mohn</span></p>
-	</section>
-	<script src="/assets/scripts/email-address-reveal.js"></script>
-	<?= round(filesize(__FILE__) / 1024, 2) . 'KB loaded in ' . 1 . ' second. <span class="blinker"> &#9608;</span>'; ?>
-</body>
-</html>
+	<script src="/assets/scripts/colour-change.js"></script>
+	<?php require('/var/www/public/assets/templates/footer.php'); ?>
