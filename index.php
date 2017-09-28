@@ -16,7 +16,7 @@
 		<br>
 		<div class="single-tab single-project">
 			<p><a href="//www.striphealthcafe.com/">Strip Health Cafe</a></p>
-			<p>Website, hosting, and graphic design for a healthy food-cafe based in Manchester UK.</p>
+			<p>Website, hosting, and graphic design for a healthy-food cafe based in Manchester UK.</p>
 		</div>
 		<div class="single-tab single-project">
 			<p><a href="//www.theninjareport.co.uk">The Ninja Report</a></p>
