@@ -2,6 +2,7 @@
 // Getting function files and autoloading composer modules.
 require('/var/www/public/assets/functions/get-env-vars.php');
 include('/var/www/public/assets/functions/get-browser-name.php');
+include('/var/www/public/assets/functions/get-tags.php');
 require('/var/www/public/vendor/autoload.php');
 
 // Grab user's browser type.
@@ -18,31 +19,6 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-function randomWrittenWord($word) {
-	switch ($word) {
-	    case 1:
-	        $word = "Hastily written";
-	        break;
-	    case 2:
-	        $word = "Scribbled";
-	        break;
-	    case 3:
-	        $word = "Worded";
-	        break;
-	    case 4:
-			$word = "Penned";
-	        break;
-	    case 5:
-			$word = "Scratched";
-	        break;
-	    case 5:
-			$word = "Scribed";
-	        break;
-	    default:
-	        $word = "Written";
-    }
-    return $word;
-}
 require('/var/www/public/assets/templates/head.php');
 require('/var/www/public/assets/templates/navbar.php');
 ?>
@@ -53,10 +29,18 @@ require('/var/www/public/assets/templates/navbar.php');
 		<article class="single-tab single-project">
 			<p>
 				<a href="posts/<?= $post['slug'] ?>.php"><?= $post['title']; ?></a><br>
-				<?= randomWrittenWord(rand(1, 6)); ?> on <?= date('jS F Y', strtotime($post['created'])); ?>
+				<?= date('jS F Y', strtotime($post['created'])); ?><br>
+				<span class="tags">
+					<?php $tags = getTags($post['tags']); ?>
+					<?php if(!empty($tags)) : ?>
+						<?php foreach($tags as $tag) : ?>
+							[<?= $tag[0]['name']; ?>]
+						<?php endforeach; ?>
+					<?php endif; ?>
+				</span>
 			</p>
 		</article>
 		<?php endforeach; ?>
 	</section>
-	<script src="/assets/scripts/colour-change.js"></script>
-	<?php require('/var/www/public/assets/templates/footer.php'); ?>
+<script src="/assets/scripts/colour-change.js"></script>
+<?php require('/var/www/public/assets/templates/footer.php'); ?>

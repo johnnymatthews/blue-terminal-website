@@ -91,4 +91,15 @@ code {
 h1 { color: #8AFFC1; }
 h2 { color: #F7717D; }
 h3 { color: #89A6FB; }
-.console-user{color:#2c82b7}.console-os{color:#209b23}.console-pwd{color:#d1bc1d}
+.console-user {
+	color:#2c82b7
+}
+.console-os {
+	color:#209b23
+}
+.console-pwd {
+	color:#d1bc1d
+}
+.tags {
+	color: #7a7a7a;
+}

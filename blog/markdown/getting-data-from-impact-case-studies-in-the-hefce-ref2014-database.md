@@ -14,7 +14,7 @@ There's a joke within programming circles that says "*if you want to be the best
  - Find `<ul class="list">` (there is only one of these tags in the whole source)
  - For every `<li>` section find the first link inside it
  - Grab the text in between the `<a>` and `</a>` tags
- - Side note: We could have used the `<h1>` tag, but then we'd have to deal with removing the <a> tags inside of it, so it was just easier to go for the text directly.
+ - Side note: We could have used the `<h1>` tag, but then we'd have to deal with removing the &#60;a/&#62; tags inside of it, so it was just easier to go for the text directly.
 
 So now we've got a shiny new list of Impact Case studies using data in the UK Data Service collection. The REF2014 studies are ordered by Unit of Assessment (UOA) numbers. UOA numbers are essentially the subject of study that the publication refers to. For example, an article titled *Knee Injuries In Contact Sports* would likely fall under *UOA 26 - Sport and Exercise Sciences, Leisure and Tourism*.
 
