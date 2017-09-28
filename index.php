@@ -1,8 +1,9 @@
 <?php 
-	include('/var/www/public/assets/functions/get-browser-name.php');
+	require __DIR__ . '/vendor/autoload.php';
+	require __DIR__ . '/assets/templates/head.php';
+	require __DIR__ . '/assets/templates/navbar.php';
+	include __DIR__ . '/assets/functions/get-browser-name.php';
 	$browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
-	require('/var/www/public/assets/templates/head.php');
-	require('/var/www/public/assets/templates/navbar.php');
 ?>
  	<section>
  		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --about</p>

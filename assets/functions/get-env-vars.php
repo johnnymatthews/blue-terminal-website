@@ -3,4 +3,4 @@
 $servername = "localhost";
 $username = "root";
 $password = "root";
-$project_root = "/var/www/html";
+$project_root = "/var/www/html"; // Don't include trailing slash.

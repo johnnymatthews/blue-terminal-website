@@ -1,9 +1,9 @@
 <?php
 // Getting function files and autoloading composer modules.
-require('/var/www/public/assets/functions/get-env-vars.php');
-include('/var/www/public/assets/functions/get-browser-name.php');
-include('/var/www/public/assets/functions/get-tags.php');
-require('/var/www/public/vendor/autoload.php');
+require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../assets/functions/get-env-vars.php';
+include __DIR__ . '/../assets/functions/get-browser-name.php';
+include __DIR__ . '/../assets/functions/get-tags.php';
 
 // Grab user's browser type.
 $browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
@@ -43,4 +43,4 @@ require('/var/www/public/assets/templates/navbar.php');
 		<?php endforeach; ?>
 	</section>
 <script src="/assets/scripts/colour-change.js"></script>
-<?php require('/var/www/public/assets/templates/footer.php'); ?>
+<?php require __DIR__ . '/../assets/templates/footer.php'; ?>
