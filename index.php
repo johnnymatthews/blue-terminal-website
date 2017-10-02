@@ -1,8 +1,11 @@
 <?php 
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/assets/templates/head.php';
-require __DIR__ . '/assets/templates/navbar.php';
-include __DIR__ . '/assets/functions/get-browser-name.php';
+// Import the PROJECT_ROOT global variable.
+include_once("project_root.php");
+
+require PROJECT_ROOT . '/vendor/autoload.php';
+require PROJECT_ROOT . '/assets/templates/head.php';
+require PROJECT_ROOT . '/assets/templates/navbar.php';
+include PROJECT_ROOT . '/assets/functions/get-browser-name.php';
 
 // Grab user's browser type.
 $browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
@@ -50,4 +53,4 @@ $browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
  		<p class="single-tab"><a href="//www.linkedin.com/in/mohnjatthews">LinkedIn</a></p>
  	</section>
  	<script src="/assets/scripts/email-address-reveal.js"></script>
- 	<?php require('/var/www/public/assets/templates/footer.php'); ?>
+ 	<?php require PROJECT_ROOT . 'assets/templates/footer.php'; ?>
