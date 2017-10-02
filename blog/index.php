@@ -1,11 +1,11 @@
 <?php
-// Getting function files and autoloading composer modules.
-require __DIR__ . '/../vendor/autoload.php';
-include __DIR__ . '/../assets/functions/get-browser-name.php';
-include __DIR__ . '/../assets/functions/get-tags.php';
-
 // Import the PROJECT_ROOT global variable.
 include_once("../project_root.php");
+
+// Getting function files and autoloading composer modules.
+require PROJECT_ROOT . '/vendor/autoload.php';
+include PROJECT_ROOT . '/assets/functions/get-browser-name.php';
+include PROJECT_ROOT . '/assets/functions/get-tags.php';
 
 // Load environment variables.
 $dotenv = new Dotenv\Dotenv(PROJECT_ROOT);
