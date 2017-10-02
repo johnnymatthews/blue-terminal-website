@@ -3,9 +3,9 @@
 include_once("../project_root.php");
 
 // Getting function files and autoloading composer modules.
-require PROJECT_ROOT . '/vendor/autoload.php';
-include PROJECT_ROOT . '/assets/functions/get-browser-name.php';
-include PROJECT_ROOT . '/assets/functions/get-tags.php';
+require PROJECT_ROOT . 'vendor/autoload.php';
+include PROJECT_ROOT . 'assets/functions/get-browser-name.php';
+include PROJECT_ROOT . 'assets/functions/get-tags.php';
 
 // Load environment variables.
 $dotenv = new Dotenv\Dotenv(PROJECT_ROOT);
