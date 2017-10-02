@@ -12,7 +12,7 @@ try {
     $conn = new PDO("mysql:host=$servername;dbname=blog", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $stmt = $conn->prepare("SELECT * FROM posts ORDER BY created DESC"); 
+    $stmt = $conn->prepare("SELECT * FROM posts WHERE deleted = 0 ORDER BY created DESC"); 
     $stmt->execute();
     $result_index = $stmt->fetchAll();
 } catch(PDOException $e) {
@@ -35,7 +35,7 @@ require('/var/www/public/assets/templates/navbar.php');
 						if(!empty($post['tags'])) {
 							$tags = getTags($post['tags']);
 							foreach($tags as $tag) {
-								echo "[" . $tag[0]['name'] . "]";
+								echo "[" . $tag[0]['name'] . "] ";
 							}
 						}
 					?>
