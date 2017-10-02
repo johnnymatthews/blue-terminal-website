@@ -28,8 +28,8 @@ try {
     echo "Connection failed: " . $e->getMessage();
 }
 
-require('/var/www/public/assets/templates/head.php');
-require('/var/www/public/assets/templates/navbar.php');
+require(PROJECT_ROOT . 'assets/templates/head.php');
+require(PROJECT_ROOT . '/assets/templates/navbar.php');
 ?>
 	<section>
 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --blog</p>
@@ -54,4 +54,4 @@ require('/var/www/public/assets/templates/navbar.php');
 		<?php endforeach; ?>
 	</section>
 <script src="/assets/scripts/colour-change.js"></script>
-<?php require __DIR__ . '/../assets/templates/footer.php'; ?>
+<?php require PROJECT_ROOT . 'assets/templates/footer.php'; ?>
