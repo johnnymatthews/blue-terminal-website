@@ -1,9 +1,15 @@
 <?php
 // Getting function files and autoloading composer modules.
 require __DIR__ . '/../vendor/autoload.php';
-require __DIR__ . '/../assets/functions/get-env-vars.php';
 include __DIR__ . '/../assets/functions/get-browser-name.php';
 include __DIR__ . '/../assets/functions/get-tags.php';
+
+// Load environment variables.
+$dotenv = new Dotenv\Dotenv(PROJECT_ROOT);
+$dotenv->load();
+$servername = getenv('MYSQL_LOCATION');
+$username = getenv('MYSQL_USERNAME');
+$password = getenv('MYSQL_PASSWORD');
 
 // Grab user's browser type.
 $browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
