@@ -1,46 +1,42 @@
-<?php
-	// Getting function files and autoloading composer modules.
-	require('/var/www/public/assets/functions/get-env-vars.php');
-	include('/var/www/public/assets/functions/get-browser-name.php');
-	require('/var/www/public/vendor/autoload.php');	
-	$Parsedown = new Parsedown();
+<?php 
+include_once("../../project_root.php");
+require PROJECT_ROOT . '/vendor/autoload.php';
+include PROJECT_ROOT . '/assets/functions/get-browser-name.php';
 
-	// Grab user's browser type.
-	$browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
+// Load environment variables.
+$dotenv = new Dotenv\Dotenv(PROJECT_ROOT);
+$dotenv->load();
+$servername = getenv('MYSQL_LOCATION');
+$username = getenv('MYSQL_USERNAME');
+$password = getenv('MYSQL_PASSWORD');
 
-	$post_slug = basename(__FILE__, '.php');
+// Grab user's browser type.
+$browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
 
-	try {
-	    $conn = new PDO("mysql:host=$servername;dbname=blog", $username, $password);
-	    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+// Get current file name, ignoring the extention.
+$file_name = basename(__FILE__, '.php');
 
-	    $stmt = $conn->prepare("SELECT * FROM posts WHERE slug LIKE '$post_slug'"); 
-	    $stmt->execute();
-	    $result = $stmt->fetchAll();
-	} catch(PDOException $e) {
-	    echo "Connection failed: " . $e->getMessage();
-	}
+try {
+    $connection = new PDO("mysql:host=$servername;dbname=blog", $username, $password);
+    $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $statement = $connection->prepare("SELECT * FROM posts WHERE slug = '$file_name'"); 
+    $statement->execute();
+    $result = $statement->fetchAll();
+} catch(PDOException $error) {
+    echo "Connection failed: " . $error->getMessage();
+}
+require PROJECT_ROOT . '/assets/templates/head.php';
+require PROJECT_ROOT . '/assets/templates/navbar.php';
 ?>
-<?php require('/var/www/public/assets/templates/head.php'); ?>
-<body>
-	<nav>
-		<p>=================</p>
-		<p>|| <a href="/">home</a> | <a href="/blog">blog</a> ||</p>
-		<p>=================</p>
-		<br>
-	</nav>
-	<section>
-		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --blog</p>
-		<article class="single-tab">
-			<?php
-				echo $Parsedown->text($markdown_post);
-			?>
-		</article>
-	</section>
-	<section>
-		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> style <span class="title title-basic" onclick="changeColorScheme('basic')">basic</span> <span class="title title-man" onclick="changeColorScheme('man')">man</span> <span class="title title-mohn" onclick="changeColorScheme('mohn')">mohn</span></p>
-	</section>
-	<script src="/assets/scripts/email-address-reveal.js"></script>
-	<?= round(filesize(__FILE__) / 1024, 2) . 'KB loaded in < 1 second. <span class="blinker"> &#9608;</span>'; ?>
-</body>
-</html>
+<section>
+	<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --blog <?= $result[0]['title']; ?> <?= $result[0]['created']; ?></p>
+	<article class="single-tab">
+		<?php
+			$Parsedown = new Parsedown();
+			echo $Parsedown->text($result[0]['content']);
+		?>
+	</article>
+</section>
+<script src="/assets/scripts/colour-change.js"></script>
+<?php require PROJECT_ROOT . '/assets/templates/footer.php'; ?>
