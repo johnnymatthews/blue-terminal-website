@@ -31,12 +31,14 @@ require('/var/www/public/assets/templates/navbar.php');
 				<a href="posts/<?= $post['slug'] ?>.php"><?= $post['title']; ?></a><br>
 				<?= date('jS F Y', strtotime($post['created'])); ?><br>
 				<span class="tags">
-					<?php $tags = getTags($post['tags']); ?>
-					<?php if(!empty($tags)) : ?>
-						<?php foreach($tags as $tag) : ?>
-							[<?= $tag[0]['name']; ?>]
-						<?php endforeach; ?>
-					<?php endif; ?>
+					<?php
+						if(!empty($post['tags'])) {
+							$tags = getTags($post['tags']);
+							foreach($tags as $tag) {
+								echo "[" . $tag[0]['name'] . "]";
+							}
+						}
+					?>
 				</span>
 			</p>
 		</article>

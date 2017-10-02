@@ -3,7 +3,6 @@
 	require('/var/www/public/assets/functions/get-env-vars.php');
 	include('/var/www/public/assets/functions/get-browser-name.php');
 	require('/var/www/public/vendor/autoload.php');	
-	use Cocur\Slugify\Slugify;
 	$Parsedown = new Parsedown();
 
 	// Grab user's browser type.
@@ -21,21 +20,8 @@
 	} catch(PDOException $e) {
 	    echo "Connection failed: " . $e->getMessage();
 	}
-
-	// Get file contents of the .md file that has the same name as this php file.
-	$markdown_post = file_get_contents('/var/www/public/blog/markdown/' . $post_slug . ".md");
 ?>
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Mohnjatthews - <?= $post['title']; ?></title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
-	<link href="/assets/css/style.css" rel="stylesheet">
-	<link rel="icon" href="/favicon.png">
-	<style id="color-scheme-css"></style>
-</head>
+<?php require('/var/www/public/assets/templates/head.php'); ?>
 <body>
 	<nav>
 		<p>=================</p>
