@@ -37,7 +37,7 @@ $browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
 			<p>Website for a personal fitness instructor contact website.</p>
 		</div>
 		<div class="single-tab single-project">
-			<p><a href="//github.com/mohnjatthews/lotr-timer-depricated">LOTR Timer</a></p>
+			<p><a href="projects/lotr-timer/">LOTR Timer</a></p>
 			<p>The Lord of the Rings related hackday project.</p>
 		</div>
 		<div class="single-tab single-project">
