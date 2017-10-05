@@ -29,7 +29,7 @@ $browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
 			<p>Website and hosting for a metal band in the UK.</p>
 		</div>
 		<div class="single-tab single-project">
-			<p><a href="//github.com/mohnjatthews/friendsum">Friendsum</a></p>
+			<p><a href="/projects/friendsum">Friendsum</a></p>
 			<p>Custom lorem ipsum generator created during a hackday.</p>
 		</div>
 		<div class="single-tab single-project">
