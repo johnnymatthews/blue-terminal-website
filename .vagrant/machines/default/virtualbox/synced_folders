@@ -1,1 +1,0 @@
-{"virtualbox":{"/var/www":{"mount_options":["dmode=777","fmode=666","uid=1000","gid=1000"],"guestpath":"/var/www","hostpath":"/Users/roshan/Code/personal/terminal-portfolio","disabled":false,"__vagrantfile":true}}}
