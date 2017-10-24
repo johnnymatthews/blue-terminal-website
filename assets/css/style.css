@@ -2,7 +2,24 @@ body {
     color: #36ed39;
     background-color: #212121;
     padding: 30px;
-    font-family: "Roboto Mono", monospace
+    font-family: "Roboto Mono", monospace;	
+    animation: colorchange 10s infinite;
+    -webkit-animation: colorchange 11s infinite; /* Chrome and Safari */
+}
+@keyframes colorchange {
+    0%   {background: #2b2b2b;}
+    25%  {background: #212121;}
+    50%  {background: #0f0f0f;}
+    75%  {background: #212121;}
+    100% {background: #2b2b2b;}
+}
+/* Safari and Chrome - necessary duplicate */
+@-webkit-keyframes colorchange {
+	0%   {background: #2b2b2b;}
+    25%  {background: #212121;}
+    50%  {background: #0f0f0f;}
+    75%  {background: #212121;}
+    100% {background: #2b2b2b;}
 }
 a {
     color: #b4ba1b

@@ -2,7 +2,7 @@ function changeColorScheme(o) {
     var e;
     switch (o) {
         case "basic":
-            e = ".console-user,body{color:#000}body{background-color:#fff}.console-os{color:grey}.console-pwd{color:#000}";
+            e = ".console-user,body{color:#fff}body{background-color:#fff}.console-os{color:grey}.console-pwd{color:#fff}";
             break;
         case "man":
             e = "body{color:#6195e8;background-color:#ff0}.console-user{color:red}.console-os{color:#00f}.console-pwd{color:#fff}";
