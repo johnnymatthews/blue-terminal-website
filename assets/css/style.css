@@ -3,23 +3,32 @@ body {
     background-color: #212121;
     padding: 30px;
     font-family: "Roboto Mono", monospace;	
-    animation: colorchange 10s infinite;
-    -webkit-animation: colorchange 11s infinite; /* Chrome and Safari */
+    background: linear-gradient(270deg, #000000, #282828);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    -o-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
 }
-@keyframes colorchange {
-    0%   {background: #2b2b2b;}
-    25%  {background: #212121;}
-    50%  {background: #0f0f0f;}
-    75%  {background: #212121;}
-    100% {background: #2b2b2b;}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-/* Safari and Chrome - necessary duplicate */
-@-webkit-keyframes colorchange {
-	0%   {background: #2b2b2b;}
-    25%  {background: #212121;}
-    50%  {background: #0f0f0f;}
-    75%  {background: #212121;}
-    100% {background: #2b2b2b;}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 a {
     color: #b4ba1b
