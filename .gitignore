@@ -1,5 +1,5 @@
 .env
 .DS_Store
-public/vendor*
-public/projects*
-public/pizza.php
+vendor*
+projects*
+pizza.php
