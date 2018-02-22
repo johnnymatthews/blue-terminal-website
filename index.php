@@ -1,56 +1,176 @@
-<?php 
-// Import the PROJECT_ROOT global variable.
-include_once("project_root.php");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>mohnjatthews | johnmatthews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+    
+        @font-face {
+            font-family: 'dos';
+            src: url('/dos.ttf');
+        }
 
-require PROJECT_ROOT . '/vendor/autoload.php';
-require PROJECT_ROOT . '/assets/templates/head.php';
-require PROJECT_ROOT . '/assets/templates/navbar.php';
-include PROJECT_ROOT . '/assets/functions/get-browser-name.php';
+        html {
+            background-color: #bbbbbb;
+        }
 
-// Grab user's browser type.
-$browser = get_browser_name($_SERVER['HTTP_USER_AGENT']);
-?>
- 	<section>
- 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --about</p>
- 		<br>
- 		<header>
- 			<p class="single-tab">Hi there, I'm John Matthews. I write code and technical docs. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p> 
- 		</header>
-  	</section>
-	<section name="projects" class="projects">
-		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --projects</p>
-		<br>
-		<div class="single-tab single-project">
-			<p><a href="//www.striphealthcafe.com/">Strip Health Cafe</a></p>
-			<p>Website, hosting, and graphic design for a healthy-food cafe based in Manchester UK.</p>
-		</div>
-		<div class="single-tab single-project">
-			<p><a href="//www.theninjareport.co.uk">The Ninja Report</a></p>
-			<p>Website and hosting for a metal band in the UK.</p>
-		</div>
-		<div class="single-tab single-project">
-			<p><a href="/projects/friendsum">Friendsum</a></p>
-			<p>Custom lorem ipsum generator created during a hackday.</p>
-		</div>
-		<div class="single-tab single-project">
-			<p><a href="//www.dmbespokehealth.co.uk/index.php">DM Bespoke Health</a></p>
-			<p>Website for a personal fitness instructor contact website.</p>
-		</div>
-		<div class="single-tab single-project">
-			<p><a href="projects/lotr-timer/">LOTR Timer</a></p>
-			<p>The Lord of the Rings related hackday project.</p>
-		</div>
-		<div class="single-tab single-project">
-			<p><a href="//www.tithebarn.net">Tithe Barn</a></p>
-			<p>Website, hosting, and company branding for a bed and breakfast in Cumbria, UK.</p>
-		</div>
- 	</section>
- 	<section>
- 		<p><span class="console-user">user</span>@<span class="console-os"><?= $browser ?>:</span><span class="console-pwd">~/$</span> mohnjatthews --contact</p>
- 		<br>
- 		<p id="email-address-reveal" class="single-tab"><a onclick="toggleEmail()"><u>Click for Email</u></a></p>
- 		<p class="single-tab"><a href="//www.github.com/mohnjatthews">GitHub</a></p>
- 		<p class="single-tab"><a href="//www.linkedin.com/in/mohnjatthews">LinkedIn</a></p>
- 	</section>
- 	<script src="/assets/scripts/email-address-reveal.js"></script>
- 	<?php require PROJECT_ROOT . 'assets/templates/footer.php'; ?>
+        body {
+            margin: 0;
+            color: #bbbbbb;
+            font-family: 'dos', monospace;
+            font-size: 20px;
+            line-height: 20px;
+            word-wrap: break-word;
+            background-color: #000084;
+        }
+
+        h1, h2, h3 {
+            font-size: 18px;
+            padding: 0;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fefe54;
+        }
+
+        a:hover {
+            background-color: #FFA500;
+        }
+
+        main {
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 800px;
+        }
+
+        nav ul {
+            color: black;
+            list-style-type: none;
+            margin: 0;
+            padding-left: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            background-color: #bbbbbb;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav li a {
+            text-transform: uppercase;
+            font-size: 20px;
+            display: block;
+            color: black;
+            margin-right: 5px;
+            padding-left: 5px;
+            padding-right: 4px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
+            color: white;
+        }
+
+        nav .active {
+            background-color: #111;
+            color: white;   
+        }
+
+        h1 {
+            color: black;
+            background: #00aaaa;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+        }
+
+        h2 {
+            color: pink;
+            margin-top: 15px;
+        }
+
+        p span {
+            color: white;
+        }
+
+        .lead {
+            padding: 9px 14px 9px 14px;
+            border: 2px solid #bbbbbb;
+        }
+
+        contact p {
+            cursor: pointer;
+        }
+
+        footer {
+            color: black;
+            background: #bbbbbb;
+            margin-top: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 15px;
+        }
+
+        footer a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!-- <li><a href="/blog">Blog</a></li> -->
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <h1>mohnjatthews.com</h1>
+        </header>
+
+        <about id="about">
+            <h2>>>> Hi there!</h2>
+            <p class="lead">I'm John Matthews. I write code and technical docs. Contact information is at the bottom, recent projects are in the middle, and the introductory paragraph is right here. Feel free to get in touch if you have a project idea, need a hand with your code, or just fancy a pint.</p>
+        </about>
+
+        <projects id="projects">
+            <h2>>>> Projects</h2>
+            <p><a href="//striphealthcafe.com/">striphealthcafe.com</a><br>Website, hosting, and graphic design for a healthy-food cafe based in Manchester UK.</p><br>
+            <p><a href="//theninjareport.co.uk">theninjareport.co.uk</a><br>Website and hosting for a metal band in the UK.</p><br>
+            <p><a href="//mohnjatthews.github.io/friendsum/">friendsum.site</a><br>Custom lorem ipsum generator created during a hackday.</p><br>
+            <p><a href="//davidmollard.co.uk">davidmollard.co.uk</a><br>Website for a personal fitness instructor contact website.</p><br>
+            <p><a href="//mohnjatthews.com/projects/lotr-timer">lotr-timer.site</a><br>The Lord of the Rings related hackday project.</p><br>
+            <p><a href="//www.tithebarn.net/">tithebarn.net</a><br>Website, hosting, and company branding for a bed and breakfast in Cumbria, UK.</p><br>
+        </projects>
+
+        <contact id="contact">
+            <h2>>>> Contact</h2>
+            <p id="email-address-reveal"><a onclick="toggleEmail()">Click for Email</a></p>
+            <p><a href="//github.com/mohnjatthews">GitHub</a></p>
+            <p><a href="//www.linkedin.com/in/mohnjatthews">LinkedIn</a></p>
+        </contact>
+    </main>
+
+    <footer>
+        <p>Loaded <?= filesize(basename($_SERVER['SCRIPT_FILENAME'])); ?>KB in 15.<?= rand(1,11); ?>ms</p>
+    </footer>
+</body>
+<script>
+    function toggleEmail() {
+    var o = "john@mohnjatthews.com";
+    document.getElementById("email-address-reveal").innerHTML != '<a href="mailto:' + o + '">' + o + "</a>" ? document.getElementById("email-address-reveal").innerHTML = '<a href="mailto:' + o + '">' + o + "</a>" : document.getElementById("email-address-reveal").innerHTML = "&nbsp;"
+    }
+</script>
+</html>
