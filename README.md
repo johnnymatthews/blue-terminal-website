@@ -9,3 +9,7 @@ There's a demo you can [view here](http://www.mohnjatthews.com)
  - Bants
 
 That's it!
+
+---
+
+For use under [Creative Commons 4 - CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
