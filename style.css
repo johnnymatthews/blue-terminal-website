@@ -1,0 +1,124 @@
+/* Reset.css (public domain) https://meyerweb.com/eric/tools/css/reset/  */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+:root {
+    --background-colour: #000084;
+    --text-colour: #bbbbbb;
+    --text-span-colour: #ffffff;
+    --link-colour: #fefe54;
+    --link-hover-colour: #ffa500;
+    --font-size: 20px;
+    --header-one-colour: #000000;
+    --header-one-background: #00aaaa;
+    --header-two-colour: #ffc0cb;
+    --menu-text-colour: #000000;
+    --menu-background-colour: #bbbbbb;
+    --footer-text-colour: #000000;
+    --footer-background-colour: #bbbbbb;
+}
+
+/* Zeh Fernando (public domain) http://zehfernando.com/ */
+@font-face {
+    font-family: 'dos';
+    src: url('/dos.ttf');
+}
+
+html {
+    background-color: var(--background-colour);
+}
+
+body {
+    color: var(--text-colour);
+    font-family: 'dos', monospace;
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    font-size: 95%;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-colour);
+}
+
+a:hover {
+    background-color: var(--link-hover-colour);
+}
+
+main {
+    padding-left: var(--font-size);
+    padding-right: var(--font-size);
+    max-width: 800px;
+}
+
+nav ul {
+    margin-bottom: var(--font-size);
+    overflow: hidden;
+    background-color: var(--menu-background-colour);
+}
+
+nav li {
+    float: left;
+}
+
+@media only screen and (max-width: 500px) {
+    nav li {
+        float: none;
+    }
+}
+
+nav li a {
+    text-transform: uppercase;
+    display: block;
+    color: var(--menu-text-colour);
+    /* margin-right: 5px; */
+    padding-left: var(--font-size);
+    padding-right: var(--font-size);
+}
+
+nav li a:hover {
+    background-color: var(--menu-text-colour);
+    color: var(--menu-background-colour);
+}
+
+nav .active {
+    background-color: var(--menu-text-colour);
+    color: white;
+}
+
+h1 {
+    color: var(--header-one-colour);
+    background: var(--header-one-background);
+    padding-top: var(--font-size);
+    padding-bottom: var(--font-size);
+    padding-left: var(--font-size);
+}
+
+h2 {
+    color: var(--header-two-colour);
+    margin-top: var(--font-size);
+}
+
+p span {
+    color: var(--text-span-colour);
+}
+
+contact p {
+    cursor: pointer;
+}
+
+footer {
+    color: var(--footer-text-colour);
+    background: var(--footer-background-colour);
+    margin-top: var(--font-size);
+    padding-left: var(--font-size);
+    padding-right: var(--font-size);
+}
+
+footer a {
+    color: var(--footer-text-colour);
+}
