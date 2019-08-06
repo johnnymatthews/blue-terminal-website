@@ -1,26 +1,29 @@
 /* Reset.css (public domain) https://meyerweb.com/eric/tools/css/reset/  */
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 
+/* int10h (CC BY-SA 4.0) https://int10h.org/oldschool-pc-fonts/fontlist/ */
+@font-face {
+    font-family: 'ibm';
+    src: url('ibm-ega8.ttf');
+}
+
 :root {
     --background-colour: #000084;
     --text-colour: #bbbbbb;
     --text-span-colour: #ffffff;
-    --link-colour: #fefe54;
+    --link-colour: #b1f543;
     --link-hover-colour: #ffa500;
     --font-size: 20px;
     --header-one-colour: #000000;
     --header-one-background: #00aaaa;
-    --header-two-colour: #ffc0cb;
+    --header-two-colour: #e160dc;
+    --header-three-colour: #ffd166;
+    --header-four-colour: #ef476f;
+    --header-five-colour: #f5cce8;
     --menu-text-colour: #000000;
     --menu-background-colour: #bbbbbb;
     --footer-text-colour: #000000;
     --footer-background-colour: #bbbbbb;
-}
-
-/* Zeh Fernando (public domain) http://zehfernando.com/ */
-@font-face {
-    font-family: 'dos';
-    src: url('/dos.ttf');
 }
 
 html {
@@ -29,15 +32,45 @@ html {
 
 body {
     color: var(--text-colour);
-    font-family: 'dos', monospace;
+    font-family: 'ibm', monospace;
     font-size: var(--font-size);
 }
 
-h1,
-h2,
-h3 {
-    font-size: 95%;
+h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
+}
+
+h1 {
+    color: var(--header-one-colour);
+    background: var(--header-one-background);
+    padding-top: var(--font-size);
+    padding-bottom: var(--font-size);
+    padding-left: var(--font-size);
+}
+
+h2 { color: var(--header-two-colour); }
+h2 span { color: var(--header-three-colour); }
+h2::before { content: "> "; }
+
+h3 { color: var(--header-three-colour); }
+h3::before { content: ">> "; }
+
+h4 { color: var(--header-four-colour); }
+h4::before { content: ">>> "; }
+
+h5 { color: var(--header-five-colour); }
+h5::before { content: ">>>> "; }
+
+h2, h3, h4, h5, h6 {
+    margin-top: var(--font-size);
+}
+
+p + p {
+    padding-top: var(--font-size);
+}
+
+p span {
+    color: var(--text-span-colour);
 }
 
 a {
@@ -59,6 +92,7 @@ nav ul {
     margin-bottom: var(--font-size);
     overflow: hidden;
     background-color: var(--menu-background-colour);
+    list-style-type: none;
 }
 
 nav li {
@@ -90,25 +124,54 @@ nav .active {
     color: white;
 }
 
-h1 {
-    color: var(--header-one-colour);
-    background: var(--header-one-background);
+ul, ol {
+    display: block;
+    padding-left: 40px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+pre {
+    margin-top: var(--font-size);
+    margin-bottom: var(--font-size);
+    margin-left: var(--font-size);
+    margin-right: var(--font-size);
     padding-top: var(--font-size);
     padding-bottom: var(--font-size);
     padding-left: var(--font-size);
+    padding-right: var(--font-size);
+    overflow-x: scroll;
+    background: #1a1a1a;
+    color: #66ff66;
 }
 
-h2 {
-    color: var(--header-two-colour);
-    margin-top: var(--font-size);
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #0f0f0f;
 }
 
-p span {
-    color: var(--text-span-colour);
-}
-
-contact p {
-    cursor: pointer;
+img {
+    padding: var(--font-size);
+    display:block;
+    margin:auto;
+    width: 80%;
+    height: auto;
 }
 
 footer {
