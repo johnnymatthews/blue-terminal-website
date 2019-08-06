@@ -93,6 +93,7 @@ nav ul {
     overflow: hidden;
     background-color: var(--menu-background-colour);
     list-style-type: none;
+    padding-left: 0px;
 }
 
 nav li {
