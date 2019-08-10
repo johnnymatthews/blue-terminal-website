@@ -4,7 +4,7 @@ This is the public repository for the terminal-style design of [mohnjatthews.com
 
 ![Screenshot of this Project](example.png)
 
-There's a demo you can [view here](http://www.mohnjatthews.com)
+There's a demo you can [view here](https://mohnjatthews.github.io/terminal-portfolio/)
 
 ---
 
