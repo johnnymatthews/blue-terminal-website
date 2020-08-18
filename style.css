@@ -13,7 +13,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     --text-colour: #bbbbbb;
     --text-span-colour: #ffffff;
     --link-colour: #b1f543;
-    --link-hover-colour: #ffa500;
+    --link-hover-colour: #00aaaa;
     --font-size: 24px;
     --header-one-colour: #000000;
     --header-one-background: #00aaaa;
@@ -52,19 +52,20 @@ h1 {
     padding-left: var(--font-size);
     margin-bottom: var(--font-size);
 }
+h1::before{ content: "> "; }
 
 h2 { color: var(--header-two-colour); }
 h2 span { color: var(--header-three-colour); }
-h2::before { content: "> "; }
+h2::before { content: ">> "; }
 
 h3 { color: var(--header-three-colour); }
-h3::before { content: ">> "; }
+h3::before { content: ">>> "; }
 
 h4 { color: var(--header-four-colour); }
-h4::before { content: ">>> "; }
+h4::before { content: ">>>> "; }
 
 h5 { color: var(--header-five-colour); }
-h5::before { content: ">>>> "; }
+h5::before { content: ">>>>> "; }
 
 h2, h3, h4, h5, h6 {
     margin-top: var(--font-size);
@@ -182,6 +183,7 @@ img {
     margin:auto;
     width: 80%;
     height: auto;
+    box-shadow: 10px 10px black;
 }
 
 footer {
