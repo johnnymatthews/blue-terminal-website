@@ -8,6 +8,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 :root {
+    --text-max-width: 1000px;
     --background-colour: #000084;
     --text-colour: #bbbbbb;
     --text-span-colour: #ffffff;
@@ -32,23 +33,12 @@ html {
 
 body {
     margin: auto;
-    width: 50%;
+    width: 90%;
+    max-width: var(--text-max-width);
     color: var(--text-colour);
     font-family: 'ibm', monospace;
     font-size: var(--font-size);
 }
-
-@media screen and (max-width: 600px) {
-    body {
-      width: 100%;
-    }
-  }
-
-  @media screen and (max-width: 800px) {
-    body {
-      width: 75%;
-    }
-  }
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
@@ -114,7 +104,7 @@ nav li {
     float: left;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 650px) {
     nav li {
         float: none;
     }
