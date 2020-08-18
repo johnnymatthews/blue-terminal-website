@@ -4,7 +4,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* int10h (CC BY-SA 4.0) https://int10h.org/oldschool-pc-fonts/fontlist/ */
 @font-face {
     font-family: 'ibm';
-    src: url('/fonts/ibm-ega8.ttf');
+    src: url('/ibm-ega8.ttf');
 }
 
 :root {
@@ -13,7 +13,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     --text-span-colour: #ffffff;
     --link-colour: #b1f543;
     --link-hover-colour: #ffa500;
-    --font-size: 20px;
+    --font-size: 24px;
     --header-one-colour: #000000;
     --header-one-background: #00aaaa;
     --header-two-colour: #e160dc;
@@ -31,10 +31,24 @@ html {
 }
 
 body {
+    margin: auto;
+    width: 50%;
     color: var(--text-colour);
     font-family: 'ibm', monospace;
     font-size: var(--font-size);
 }
+
+@media screen and (max-width: 600px) {
+    body {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    body {
+      width: 75%;
+    }
+  }
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
@@ -86,7 +100,6 @@ a:hover {
 main {
     padding-left: var(--font-size);
     padding-right: var(--font-size);
-    max-width: 800px;
 }
 
 nav ul {
