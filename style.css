@@ -4,7 +4,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* int10h (CC BY-SA 4.0) https://int10h.org/oldschool-pc-fonts/fontlist/ */
 @font-face {
     font-family: 'ibm';
-    src: url('/ibm-ega8.ttf');
+    src: url('ibm-ega8.ttf');
 }
 
 :root {
