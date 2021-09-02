@@ -33,8 +33,6 @@ html {
 
 body {
     margin: auto;
-    width: 90%;
-    max-width: var(--text-max-width);
     color: var(--text-colour);
     font-family: 'ibm', monospace;
     font-size: var(--font-size);
@@ -91,6 +89,7 @@ a:hover {
 main {
     padding-left: var(--font-size);
     padding-right: var(--font-size);
+    max-width: var(--text-max-width);
 }
 
 nav ul {
