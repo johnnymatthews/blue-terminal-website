@@ -2,7 +2,7 @@
 
 ![Screenshot of this Project](example.png)
 
-There's a demo you can [view here](https://johnnymatthews.github.io/terminal-portfolio/)
+There's a demo you can [view here](https://johnnymatthews.github.io/blue-terminal-website/)
 
 ---
 
