@@ -1,4 +1,6 @@
-# Terminal Blog
+# Blue terminal website
+
+A super simple website theme, built from vanilla CSS. There's no fancy frameworks or dependencies to install. Just clone the site and go.
 
 ![Screenshot of this Project](example.png)
 
