@@ -2,7 +2,7 @@
 
 A super simple website theme, built from vanilla CSS. There's no fancy frameworks or dependencies to install. Just clone the site and go.
 
-![Screenshot of this Project](example.png)
+![Screenshot of this Project](screenshot.png)
 
 There's a demo you can [view here](https://johnnymatthews.github.io/blue-terminal-website/)
 
